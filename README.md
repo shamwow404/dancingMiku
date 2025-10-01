@@ -7,7 +7,7 @@ nvim ~/.bashrc
 at the bottom put:
 
 
-alias miku="(nohup python3 PATH_TO_PYTHON_FILE >/dev/null 2>&1 & ) >/dev/null 2>&1"
+alias miku="(nohup python3 PATH_TO_PYTHON_FILE >/dev/null 2>&1 & ) >/dev/null 2>&1"<br>
 alias mikoff="pkill -f 'PATH_TO_PYTHON_FILE' >/dev/null 2>&1 || true"
 
 save it 
