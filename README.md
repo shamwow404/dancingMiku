@@ -16,3 +16,7 @@ then reload the bashrc
 source ~/.bashrc
 
 
+type miku to run
+mikoff to close 
+
+
