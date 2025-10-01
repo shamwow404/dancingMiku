@@ -8,10 +8,10 @@ PIDFILE = "/tmp/miku.pid"
 class MikuWindow(Gtk.Window):
     def __init__(self):
         super().__init__(title="Miku")
-        self.set_decorated(False)     # no borders
-        self.set_app_paintable(True)  # allow transparency
+        self.set_decorated(False)    
+        self.set_app_paintable(True) 
         self.set_resizable(False)
-        self.set_keep_above(True)     # always on top
+        self.set_keep_above(True)     
         self.connect("destroy", self.on_destroy)
 
         # Enable RGBA transparency
@@ -30,7 +30,7 @@ class MikuWindow(Gtk.Window):
         image = Gtk.Image.new_from_file("IMAGE_URL_GO_HERE")
         self.add(image)
 
-        # Save PID so we can kill later
+        # Save PID can kill later
         with open(PIDFILE, "w") as f:
             f.write(str(os.getpid()))
 
@@ -38,9 +38,9 @@ class MikuWindow(Gtk.Window):
 
     def do_draw(self, cr):
         cr.set_source_rgba(0, 0, 0, 0)
-        cr.set_operator(3)  # clear
+        cr.set_operator(3)  
         cr.paint()
-        cr.set_operator(2)  # over
+        cr.set_operator(2) 
         Gtk.Window.do_draw(self, cr)
 
     def on_press(self, widget, event):
